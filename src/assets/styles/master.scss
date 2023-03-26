@@ -1,0 +1,66 @@
+ @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,700;1,600&display=swap');
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir Next Bold';
+  src: url('../fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+// Fonts
+$workSans:'Work Sans', sans-serif;
+$avenirNext: 'Avenir Next', sans-serif;
+$avenirNextBold: 'Avenir Next Bold', sans-serif;
+
+// Colors
+$primaryBlue: #213f7d;
+$textBlue: #545f7d;
+$actionBlue: #39cdcc;
+
+
+//Screen mode size
+
+//Mobile mode
+$maxMobileMode: 599px;
+
+//Tablet mode
+$minTabletMode: 600px;
+$maxTabletMode: 959px;
+
+//Destop mode
+$minDestopMode: 960px;
+$maxDestopMode: 1279px;
+
+//largeDestop mode
+$minLargeDestopMode: 1280px;
+$maxLargeDestopMode: 1919px;
+
+
+//Media query BreakPoints
+
+@mixin mobileMode {
+  @media screen and (max-width: #{$maxMobileMode}){
+    @content;
+  }
+}
+
+@mixin tabletMode {
+  @media screen and (min-width: #{$minTabletMode}) and (max-width: #{$maxTabletMode}) {
+    @content;
+  }
+}
+
+@mixin destopMode {
+  @media screen and (min-width: #{$minDestopMode}) and (max-width: #{$maxDestopMode}) {
+    @content
+  }
+}
+
+@mixin LargeDestopMode {
+  @media screen and (min-width: #{$minLargeDestopMode}) and (max-width: #{$maxLargeDestopMode}) {
+    @content
+  }
+}
