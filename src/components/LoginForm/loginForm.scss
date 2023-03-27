@@ -1,0 +1,91 @@
+@import "../../assets/styles/master.scss";
+
+.login-form {
+    width: 100%;
+    padding: 100px;
+    max-width: 480px;
+    padding: 0 50px;
+    font-family: $avenirNextBold;
+
+    .login-form_header {
+
+        h2 {
+            font-style: normal;
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.04em;
+            color: $primaryBlue;
+        }
+
+        p {
+            font-style: normal;
+            font-size: 14px;
+            line-height: 27px;
+            color: $textBlue;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+
+
+.login-form_group {
+    margin: 30px 0;
+    position: relative;
+
+    input {
+        border: 2px solid #545f7d26;
+        border-radius: 5px;
+        color: #545f7d;
+        font-family: $avenirNext;
+        font-size: 14px;
+        height: 50px;
+        outline: none;
+        padding: 10px 16px;
+        width: 100%;
+    }
+
+    .login-form_input--error {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .login-form_password--visible {
+        font-family: $avenirNext;
+        font-size: 12px;
+        color: #39cdcc;
+        cursor: pointer;
+        font-weight: 1000;
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    
+}
+
+.login-form_password--forget {
+    font-family: $avenirNext;
+    color: #39cdcc;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+.login-form_btn {
+    background-color: #39cdcc;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-family: Avenir next,sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 30px;
+    outline: none;
+    padding: 15px 20px;
+    width: 100%;
+}
