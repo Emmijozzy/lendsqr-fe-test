@@ -15,4 +15,16 @@
             margin-bottom: 40px
         }
     }
+
+    .user-content {
+        width: 100%;
+
+        .user-cards-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+        }
+    }
 }
