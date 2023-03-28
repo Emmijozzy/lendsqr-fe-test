@@ -1,0 +1,13 @@
+@import "../assets/styles/master.scss";
+
+.layout {
+    background-color: #fbfbfb;
+    font-family: Work Sans,sans-serif;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    overflow: hidden;
+}
+
