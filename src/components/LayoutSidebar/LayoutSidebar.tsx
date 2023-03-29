@@ -1,6 +1,7 @@
 import React from 'react';
 import LendLogo from '../logo/LendLogo';
 import NavItem from '../navItem/NavItem';
+import { NavContext } from '../../App';
 import {customersNavDatas, businessNavDatas, settingsNavDatas} from '../../data/navItem';
 import switcgArrowDown from '../../assets/images/sidebar-icons/switch-arrow-down.svg';
 import navIcons from '../../assets/images/sidebar-icons/index';
@@ -11,6 +12,8 @@ const {organisation, dashboard, logOut} = navIcons;
 type Props = {}
 
 const Sidebar = (props: Props) => {
+
+  const navValue:any = React.useContext(NavContext); 
 
 
   const customersNavItems= <ul className='sidebar-menu_outlet'>
@@ -40,12 +43,9 @@ const Sidebar = (props: Props) => {
 
 
   return (
-    <aside className='layout_sidebar-outlet'>
+    <aside className={navValue.nav ? 'layout_sidebar-outlet sidebar-active' : 'layout_sidebar-outlet sidebar-inactive'}>
       <div className="layout_sidebar-inner">
         <header className='layout-sidebar_header'>
-          <div className='sidebar-header_logo'>
-              <LendLogo />
-          </div>
           <div className='sidebar-header_nav--outlet'>
             <nav className='sidebar-header_nav--inner'>
                 <span className="nav_logo"><img src={organisation} alt="Switch" /></span>

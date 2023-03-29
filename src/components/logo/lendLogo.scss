@@ -1,7 +1,20 @@
+@import '../../assets/styles/master.scss';
+
 .logo {
     height: 36px;
     width: 210px;
     display: flex;
     place-content: center;
-    padding: 3px 3px;
+    
+    @include mobileMode {
+        padding: 0;
+        width: 180px;
+        justify-content: space-between;
+        width: auto;
+        height: 20px;
+
+        img {
+            height: 20px;
+        }
+    }
 }
