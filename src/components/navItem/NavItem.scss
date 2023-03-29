@@ -1,0 +1,23 @@
+@import '../../assets/styles/master.scss';
+
+.nav-item {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  padding-left: 30px;
+  align-items: center;
+  
+  .nav-item_image {
+
+  }
+
+  .nav-item_name {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: $textBlue
+  }
+}
