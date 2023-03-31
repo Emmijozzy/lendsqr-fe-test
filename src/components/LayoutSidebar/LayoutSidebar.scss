@@ -82,7 +82,11 @@
   
         .sidebar-menu_item, li {
           display: block;
-          height: 40px;    
+          height: 40px;  
+          
+          .active {
+            border-right: 1px solid $actionBlue;
+          }
         }
       }
   

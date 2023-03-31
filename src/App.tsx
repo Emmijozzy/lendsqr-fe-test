@@ -14,13 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-
           <Route path="/user/*" element={<Layout />}>
-            {/* <Route index element={<Users />} /> */}
-            {/* <Route index path="users" element={<Users />} /> */}
-            {/* <Route path="users/:id" element={<UserDetail />} /> */}
           </Route>
-
           <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
         </Routes>
       </div>

@@ -19,19 +19,19 @@ const Sidebar = (props: Props) => {
 
   const customersNavItems= <ul className='sidebar-menu_outlet'>
     {customersNavDatas.map((customersNavData, id) => {
-      return(   <li className='sidebar-menu_item'><NavItem navIcon={customersNavData.navIcon} navName={customersNavData.navName} navLink={customersNavData.navLink} /></li>)
+      return(   <li key={id} className='sidebar-menu_item'><NavItem navIcon={customersNavData.navIcon} navName={customersNavData.navName} navLink={customersNavData.navLink} /></li>)
     })}
   </ul>
 
   const businessNavItems: any= <ul>
     {businessNavDatas.map((businessNavData, id) => {
-      return(   <li><NavItem navIcon={businessNavData.navIcon} navName={businessNavData.navName} navLink={businessNavData.navLink} /></li>)
+      return(   <li key={id}><NavItem navIcon={businessNavData.navIcon} navName={businessNavData.navName} navLink={businessNavData.navLink} /></li>)
     })}
   </ul>
 
   const settingsNavItem: any= <ul>
     {settingsNavDatas.map((settingsNavData, id) => {
-      return(   <li><NavItem navIcon={settingsNavData.navIcon} navName={settingsNavData.navName} navLink={settingsNavData.navLink} /></li>)
+      return(   <li key={id}><NavItem navIcon={settingsNavData.navIcon} navName={settingsNavData.navName} navLink={settingsNavData.navLink} /></li>)
     })}
   </ul>
 

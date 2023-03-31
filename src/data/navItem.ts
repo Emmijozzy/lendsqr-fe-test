@@ -11,37 +11,37 @@ export const customersNavDatas = [
   {
     navName:'Guarantors',
     navIcon: garantors,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Loans',
     navIcon: loan,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Decision Makings',
     navIcon: decision,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Savings',
     navIcon: savings,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Loan Request',
     navIcon: loanRequest,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Whitelist',
     navIcon: whitelist,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Karma',
     navIcon: karma,
-    navLink: '/user'
+    navLink: '/'
   }
 ]
 
@@ -49,47 +49,47 @@ export const businessNavDatas = [
   {
     navName:'Organisation',
     navIcon: organisation,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Loan Products',
     navIcon: loanRequest,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Savings Products',
     navIcon: savingProduct,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Fee and Charges',
     navIcon: fees,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Transaction',
     navIcon: user,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Services',
     navIcon: service,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Service Account',
     navIcon: serviceAccount,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Settlements',
     navIcon: settlements,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Reports',
     navIcon: reports,
-    navLink: '/user'
+    navLink: '/'
   },
 ]
 
@@ -97,22 +97,22 @@ export const settingsNavDatas = [
   {
     navName:'Preferences',
     navIcon: preference,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Fees and Pricing',
     navIcon: pricing,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Audit Logs',
     navIcon: audit,
-    navLink: '/user'
+    navLink: '/'
   },
   {
     navName:'Message',
     navIcon: message,
-    navLink: '/user'
+    navLink: '/'
   }
 ]
 
