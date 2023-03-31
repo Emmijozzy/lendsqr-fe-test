@@ -1,6 +1,6 @@
 @import '../../assets/styles/master.scss';
 .card {
-    width: 210px;
+    width: 220px;
     height: 150px;
     left: 609px;
     background: #FFFFFF;
@@ -12,7 +12,13 @@
     flex-direction: column;
     justify-content: space-around;
     @include mobileMode {
-        width: auto;
+        width: 300px;
+        margin: 20px;
+    }
+
+    @include tabletMode {
+        width: 280px;
+        justify-content: space-around;
         margin: 20px;
     }
 
