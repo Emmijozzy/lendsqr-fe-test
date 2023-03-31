@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import './loginForm.scss'
 
 type Props = {}
@@ -7,6 +8,7 @@ type Props = {}
 const LoginForm = (props: Props) => {
     const [showPassword, setShowPassword] = useState<Boolean>(false);
 	const [loading, setLoading] = useState<Boolean>(false);
+    const navigate = useNavigate();
 
 	const {
 		register,
@@ -23,6 +25,7 @@ const LoginForm = (props: Props) => {
 
 			setTimeout(() => {
 				reset();
+                navigate('/user');
 				setLoading(false);
 			}, 2000);
 		}
@@ -36,7 +39,7 @@ const LoginForm = (props: Props) => {
         </header>
         <div className="loginForm_main">
             <form onSubmit={handleSubmit(onSubmit)}>
-                <div className='login-form mail login-form_group'>
+                <div className='login-form_email login-form_group'>
                     <input
                         type="email"
                         placeholder="Email"
@@ -45,7 +48,7 @@ const LoginForm = (props: Props) => {
                         })}
                     />
                     {errors.email && errors.email.type === 'required' && (
-                        <span role="alert" className="input_error">
+                        <span role="alert" className="login-form_input--error">
                             Please enter your email
                         </span>
                     )}
@@ -71,7 +74,7 @@ const LoginForm = (props: Props) => {
                     )}
                 </div>
 
-                <p className='lofinpassword_forget'>FORGOT PASSWORD?</p>
+                <p className='login-form_password--forget'>FORGOT PASSWORD?</p>
 
                 <button className='login-form_btn' type="submit">{loading ? 'Loading...' : 'LOG IN'}</button>
             </form>
