@@ -7,14 +7,18 @@ import dropdownIcon from '../../assets/images/dropdown.svg'
 import openNav from '../../assets/images/mobile-nav-open.svg'
 import closeNav from '../../assets/images/mobile-nav-close.svg'
 import './LayoutTopNav.scss'
-import { NavContext } from '../../App'
+import { AppContext } from '../../contexts/ContextProvider'
 type Props = {}
 
 const LayoutTopNav = (props: Props) => {
 
-    const navValue:any = React.useContext(NavContext); 
+    const navValue = React.useContext(AppContext).navContext;
+
+    const {nav, toggleNav} = navValue;
 
     console.log(navValue)
+
+
 
     return (
         <header className='layout-top_nav'>
@@ -38,8 +42,8 @@ const LayoutTopNav = (props: Props) => {
                     </div>
                 </li>
             </ul>
-            <span className="mobile-nav" onClick={navValue.toggleNav}>
-                <img src={navValue.nav ? closeNav : openNav} alt="" />
+            <span className="mobile-nav" onClick={toggleNav}>
+                <img src={nav ? closeNav : openNav} alt="" />
             </span>
         </header>
     )

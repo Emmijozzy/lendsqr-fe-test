@@ -1,6 +1,6 @@
 import React from 'react';
 import './LayoutMain.scss';
-import User from '../../pages/sub-page/user/User';
+import User from '../../pages/user/User';
 
 type Props = {}
 

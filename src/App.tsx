@@ -1,42 +1,42 @@
 import React, { useState } from 'react';
+import ContextProvider from './contexts/ContextProvider';
 import Login from './pages/login/Login';
 import User from './pages/user/User';
 import UserDetails from './pages/user/UserDetails/UserDetails';
 import Layout from './layout/Layout';
 
-interface NavContextType  {
-  nav: boolean;
-  switchNav?: () => void
-}
+// interface NavContextType  {
+//   nav: boolean;
+//   switchNav?: () => void
+// }
 
-const defaultNavState = {
-  nav: false,
-};
+// const defaultNavState = {
+//   nav: false,
+// };
 
-export const NavContext = React.createContext<NavContextType>(defaultNavState);
+// export const NavContext = React.createContext<NavContextType>(defaultNavState);
 
 function App() {
-  const [openNav, setOpenNav ] = useState(defaultNavState.nav)
+  // const [openNav, setOpenNav ] = useState(defaultNavState.nav)
 
-  const toggleNav = () => {
-    console.log('ttt')
-    setOpenNav((prevopenNav) => !prevopenNav);
-  };
+  // const toggleNav = () => {
+  //   setOpenNav((prevopenNav) => !prevopenNav);
+  // };
 
-  const openNavValue = {
-    nav: openNav,
-    toggleNav
-  }
+  // const openNavValue = {
+  //   nav: openNav,
+  //   toggleNav
+  // }
 
   return (
-    <NavContext.Provider value={openNavValue}>
+    <ContextProvider>
       <div className="app">
         <Layout />
         {/* <Login /> */}
         {/* <User />
         <UserDetails /> */}
       </div>
-    </NavContext.Provider>
+    </ContextProvider>
   );
 }
 

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import LendLogo from '../logo/LendLogo';
 import NavItem from '../navItem/NavItem';
-import { NavContext } from '../../App';
+import { AppContext } from '../../contexts/ContextProvider';
 import {customersNavDatas, businessNavDatas, settingsNavDatas} from '../../data/navItem';
 import switcgArrowDown from '../../assets/images/sidebar-icons/switch-arrow-down.svg';
 import navIcons from '../../assets/images/sidebar-icons/index';
@@ -13,8 +13,9 @@ type Props = {}
 
 const Sidebar = (props: Props) => {
 
-  const navValue:any = React.useContext(NavContext); 
+  const navValue = useContext(AppContext).navContext;
 
+  const { nav } = navValue
 
   const customersNavItems= <ul className='sidebar-menu_outlet'>
     {customersNavDatas.map((customersNavData, id) => {
@@ -43,7 +44,7 @@ const Sidebar = (props: Props) => {
 
 
   return (
-    <aside className={navValue.nav ? 'layout_sidebar-outlet sidebar-active' : 'layout_sidebar-outlet sidebar-inactive'}>
+    <aside className={nav ? 'layout_sidebar-outlet sidebar-active' : 'layout_sidebar-outlet sidebar-inactive'}>
       <div className="layout_sidebar-inner">
         <header className='layout-sidebar_header'>
           <div className='sidebar-header_nav--outlet'>

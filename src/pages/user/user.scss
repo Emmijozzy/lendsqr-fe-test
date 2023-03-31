@@ -1,0 +1,201 @@
+@import '../../assets/styles/master.scss';
+
+.user {
+ 
+    .user-header {
+
+        .user-header_name {
+            font-family: $workSans;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 28px;
+            color: $primaryBlue;
+            display: block;
+            margin-bottom: 40px
+        }
+    }
+
+    .user-content {
+        width: 100%;
+
+        .user-cards-container {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 40px;
+
+            @include mobileMode {
+                justify-content: space-around;
+            }
+
+        }
+    }
+}
+
+.user-content_users {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 30px 25px 0px 25px;
+    overflow: auto;
+    
+    @include mobileMode {
+        overflow: scroll;
+    }
+
+    @include tabletMode {
+        overflow: scroll;
+    }
+
+    .users-table {
+        min-width: 840px;
+        width: 100%;
+
+        .users-table_header{
+            
+            .users-table_header--row{
+                display: grid;
+                grid-template-columns:14% 14% 20% 16% 18% 10% 5%;
+
+                .users-table_head {
+                    height: 35px;
+                    display: flex;
+                    justify-content: flex-flex-start;
+                    margin-right: 3px;
+                    position: relative;
+
+                    .users-table-head_name {
+                        font-family: $workSans;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        font-size: 12px;
+                        color: $textBlue;
+                    }
+
+                    .table-head_filter {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .users-table_body{
+            
+            .users-table_body--row{
+                display: grid;
+                border-bottom: 1px solid rgba(33, 63, 125, 0.1);;
+                grid-template-columns:14% 14% 20% 16% 18% 10% 5%;
+
+            .users-table_body--row:last-child {
+                border-bottom: none;
+            }
+
+                .users-table_body {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 21px 0;
+                    .users-table-body_name {
+                        width: 100%;
+                        font-family: $workSans;
+                        font-weight: 400;
+                        font-size: 12px;
+                        word-wrap: break-word;
+                        word-break: break-all;
+                        text-transform: capitalize;
+                        line-height: 16px;
+                        color: $textBlue;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: 0 5px;
+                        border-radius: 10px;
+                    }
+
+                    .active {
+                        background-color: #f3fcf6;
+                        color: #39CD62;
+                        justify-content: center;
+                        font-weight: 500;
+                    }
+
+                    .table-body_action {
+                        padding: 0px 20px;
+                        flex-direction: column;
+                        height: 36px;
+                        font-size: 30px;
+                        transform: rotate(90deg); 
+                        color: $textBlue; 
+                        text-align: center;                    
+                    }
+                }
+            }
+        }
+
+    }
+    
+}
+
+
+.user-paging {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    margin: 17px 0;
+    color: $textBlue;
+    @include mobileMode {
+        flex-direction: column;
+        align-items: center
+    }
+
+    .user-paging_out{
+        display: flex;
+        width: 13em;
+        height: 24px;
+        justify-content: space-between;
+
+        #select-show {
+            outline: none;
+            border-radius: 4px;
+            background-color: #a6b2cb ;
+            border: none;
+            color: $textBlue;
+            width: 50px;
+            height: 30px;
+            padding: 0 5px;
+        }
+    }
+
+    .user-pagination {
+        display: flex;
+        width: 20em;
+        justify-content: space-between;
+        align-items: center;
+
+
+        .arrow {
+            background-color: #a6b2cb;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 4px;
+
+            #select-show {
+                outline: none;
+                border-radius: 4px;
+                background-color: #a6b2cb ;
+            }
+        }
+    }
+
+}
+
+.active {
+    background-color: #f3fcf6;
+    color: #39CD62;
+    text-align: center;
+}
+
