@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import LendLogo from '../logo/LendLogo'
 import searchIcon from '../../assets/images/search.svg'
 import notifyIcon from '../../assets/images/notification.svg'
@@ -8,17 +9,13 @@ import openNav from '../../assets/images/mobile-nav-open.svg'
 import closeNav from '../../assets/images/mobile-nav-close.svg'
 import './LayoutTopNav.scss'
 import { AppContext } from '../../contexts/ContextProvider'
+
 type Props = {}
 
 const LayoutTopNav = (props: Props) => {
 
     const navValue = React.useContext(AppContext).navContext;
-
     const {nav, toggleNav} = navValue;
-
-    console.log(navValue)
-
-
 
     return (
         <header className='layout-top_nav'>
@@ -32,7 +29,7 @@ const LayoutTopNav = (props: Props) => {
                 </div>
             </div>
             <ul className="top_nav_action">
-                <li className="notify-item"><a rel="stylesheet" href="">Doc</a></li>
+                <li className="notify-item"><NavLink to={'/doc'}>Doc</NavLink></li>
                 <li className="notify-item"><img src={notifyIcon} alt="Notification Icon" /></li>
                 <li className="notify-item avater"><img src={avater} alt="" /></li>
                 <li className="notify-item">

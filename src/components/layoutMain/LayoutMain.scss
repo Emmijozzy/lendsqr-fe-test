@@ -3,13 +3,11 @@
 .layout-main {
   width: 100%;
   height: 100%;
-  // padding-top: 100px;
   padding: 150px 50px 10px 50px;
   overflow-y: scroll;
   @include mobileMode {
     width: 100vw;
     padding: 150px 10px 10px 10px;
-
   }
 
   @include tabletMode {

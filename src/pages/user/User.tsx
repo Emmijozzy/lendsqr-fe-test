@@ -12,8 +12,7 @@ import './user.scss';
 
 type Props = {}
 
-
-const value =       {
+const value = {
   createdAt: " ",
   orgName: " ",
   userName: " ",
@@ -41,15 +40,13 @@ const User = (props: Props) => {
       await axios
         .get(`https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users`)
         .then((response:any) => {
-          // console.log(response.data)
           if(updateUsers)
           updateUsers(response.data)
-          console.log(usersData)
           setLoading(false);
         })
         .catch((error: any) => {
           const err = error.response.data;
-          console.log(err);
+          console.log(err)
           setLoading(false);
         });
     };
@@ -84,8 +81,8 @@ const User = (props: Props) => {
       </div>
       <div className="user-content">
         <div className="user-cards-container">
-        {usersStats.map((usersStat)=> {
-          return(<Card title={usersStat.title} icon={usersStat.icon} count={usersStat.count} />)
+        {usersStats.map((usersStat, i)=> {
+          return(<Card key={i} title={usersStat.title} icon={usersStat.icon} count={usersStat.count} />)
         })}
         </div>
         <div className="user-content_users">
