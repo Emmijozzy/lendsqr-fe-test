@@ -68,7 +68,7 @@ export const businessNavDatas = [
   },
   {
     navName:'Transaction',
-    navIcon: user,
+    navIcon: transaction,
     navLink: '/'
   },
   {

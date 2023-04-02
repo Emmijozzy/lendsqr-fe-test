@@ -8,7 +8,7 @@ import Card from '../../components/card/Card';
 import Filter from '../../components/filter/Filter'
 import filterResultsIcon from '../../assets/images/filter-results-button.svg';
 import TableBody from './../../components/TableBody/Tablebody';
-import './user.scss';
+import './User.scss';
 
 type Props = {}
 
@@ -105,7 +105,8 @@ const User = (props: Props) => {
               <tbody className='users-table_body'>
                 {currentItems?.map((userData, i) => (
                   <TableBody 
-                    key={i}
+                    key={i+1}
+                    id={i+1}
                     orgName={userData.orgName} 
                     userName={userData.userName}
                     email={userData.email}

@@ -1,5 +1,6 @@
-import React from 'react'
-import filterResultsIcon from '../../../assets/images/filter-results-button.svg';
+import React, { useState } from 'react'
+import './Tablebody.scss'
+import MoreAction from '../moreAction/MoreAction';
 
 type Props = {
     createdAt: string,
@@ -8,10 +9,22 @@ type Props = {
     email: string,
     phoneNumber: string,
     lastActiveDate: string
+    id: any
 }
 
 const TableBody  = (props: Props) => {
-    const {orgName, userName, createdAt, email, phoneNumber, lastActiveDate} = props
+    const [clikedId, setClickedId] = useState(0)
+    const {orgName, userName, createdAt, email, phoneNumber, lastActiveDate, id} = props
+
+    const handleClick = (id: any) => {
+        const userActionBoxs = Array.from(
+            document.querySelectorAll('.user-action_box')
+        );
+        userActionBoxs.map((userActionBox) => {
+            userActionBox.classList.remove('show-more-menu')
+        })
+        setClickedId(id)
+    }
 
   return (
         <>
@@ -34,12 +47,11 @@ const TableBody  = (props: Props) => {
                 <td className='users-table_body'>
                     <p className="users-table-body_name active">{lastActiveDate}</p>
                 </td>
-                <td className='users-table_body'>
-                    <p className="table-body_action">
-                        <span>.</span>
-                        <span>.</span>
-                        <span>.</span>
-                    </p>
+                <td className='users-table_body' onClick={()=>handleClick(id)}>
+                    <span className="table-body_action">
+                        ...
+                    </span>
+               { clikedId === id && <MoreAction clikedId={clikedId} id={id} />}
                 </td>
             </tr>
         </>

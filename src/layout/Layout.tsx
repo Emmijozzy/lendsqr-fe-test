@@ -1,5 +1,4 @@
 import React from 'react';
-import LendLogo from '../components/logo/LendLogo';
 import LayoutTopNav from '../components/layoutTopNav/LayouTopNav';
 import LayoutSidebar from '../components/LayoutSidebar/LayoutSidebar';
 import LayoutMain from '../components/layoutMain/LayoutMain';
