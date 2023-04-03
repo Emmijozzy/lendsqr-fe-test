@@ -1,4 +1,4 @@
-@import '../../assets/styles/master.scss';
+@import "../../assets/styles/master.scss";
 
 .layout-top_nav {
   background-color: #fff;
@@ -24,64 +24,67 @@
   }
 
   .top-nav_search {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 40px;
+    width: 400px;
+    margin-left: 60px;
+
+    @include mobileMode {
+      display: none;
+    }
+
+    @include tabletMode {
+      display: none;
+    }
+
+    input {
+      font-family: $workSans;
+      font-size: 12px;
+      color: #545f7d;
+      height: 100%;
+      outline: none;
+      width: 300px;
+      padding: 0 15px;
+    }
+
+    .search_icon {
+      height: 100%;
+      width: 58px;
+      background: $actionBlue;
+      display: grid;
       align-items: center;
       justify-content: center;
-      display: flex;
-      height: 40px;
-      width: 400px;
-      margin-left: 60px;
-
-      @include mobileMode {
-        display: none;
-      }
-
-      @include tabletMode{
-        display: none;
-      }
-
-      input {
-          font-family: $workSans;
-          font-size: 12px;
-          color: #545f7d;
-          height: 100%;
-          outline: none;
-          width: 300px;
-          padding: 0 15px;
-      }
-
-      .search_icon {
-          height: 100%;
-          width: 58px;
-          background: $actionBlue;
-          display: grid;
-          align-items: center;
-          justify-content: center;
-          border: none;
-          border-radius: 0 8px 8px 0;
-          color: #fff;
-          cursor: pointer;
-      }
+      border: none;
+      border-radius: 0 8px 8px 0;
+      color: #fff;
+      cursor: pointer;
+    }
   }
 
   .top_nav_action {
-      display: flex;
-      width: 250px;
-      justify-content: space-between;
-      align-items: center;
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    align-items: center;
 
-      @include mobileMode {
-        width: 210px;
-      }
+    @include mobileMode {
+      width: 210px;
+    }
 
-      .notify-item {
-        padding: 0 5px;
+    .notify-item {
+      padding: 0 5px;
+      
+      a {
+        color: $textBlue;
       }
+    }
   }
 
   .mobile-nav {
-    display:  none;
+    display: none;
     width: 30px;
-
 
     @include mobileMode {
       display: flex;
@@ -98,7 +101,7 @@
       }
     }
 
-    @include tabletMode{
+    @include tabletMode {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -112,18 +115,20 @@
   }
 }
 
-
-
-
-
 .avater {
-    img {
-        border-radius: 50%;
-        width: 100%;
-    }
+  img {
+    border-radius: 50%;
+    width: 100%;
+  }
 }
 
 .username_dropdown {
-  display: flex;  
-}
+  display: flex;
 
+  .username {
+    font-family: $avenirNext;
+    font-size: 16px;
+    font-weight: 500;
+    color: $textBlue;
+  }
+}

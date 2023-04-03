@@ -8,7 +8,7 @@ import Card from '../../components/card/Card';
 import Filter from '../../components/filter/Filter'
 import filterResultsIcon from '../../assets/images/filter-results-button.svg';
 import TableBody from './../../components/TableBody/Tablebody';
-import './User.scss';
+import './user.scss';
 
 type Props = {}
 

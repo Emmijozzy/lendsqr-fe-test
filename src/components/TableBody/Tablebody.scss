@@ -1,51 +1,51 @@
-@import '../../assets/styles//master.scss';
+@import "../../assets/styles//master.scss";
 
-.users-table_body--row{
-    display: grid;
-    border-bottom: 1px solid rgba(33, 63, 125, 0.1);;
-    grid-template-columns:14% 14% 20% 16% 18% 10% 5%;
-    position: relative;
-    .users-table_body--row:last-child {
-        border-bottom: none;
+.users-table_body--row {
+  display: grid;
+  border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+  grid-template-columns: 14% 14% 20% 16% 18% 10% 5%;
+  position: relative;
+  .users-table_body--row:last-child {
+    border-bottom: none;
+  }
+
+  .users-table_body {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 21px 0;
+    .users-table-body_name {
+      width: 100%;
+      font-family: $workSans;
+      font-weight: 500;
+      font-size: 15px;
+      word-wrap: break-word;
+      word-break: break-all;
+      text-transform: capitalize;
+      line-height: 16px;
+      color: $textBlue;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 5px;
+      border-radius: 10px;
     }
 
-    .users-table_body {
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        padding: 21px 0;
-        .users-table-body_name {
-            width: 100%;
-            font-family: $workSans;
-            font-weight: 400;
-            font-size: 12px;
-            word-wrap: break-word;
-            word-break: break-all;
-            text-transform: capitalize;
-            line-height: 16px;
-            color: $textBlue;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            padding: 0 5px;
-            border-radius: 10px;
-        }
-
-        .active {
-            background-color: #f3fcf6;
-            color: #39CD62;
-            justify-content: center;
-            font-weight: 500;
-        }
-
-        .table-body_action {
-            padding: 0px 20px;
-            flex-direction: column;
-            height: 36px;
-            font-size: 30px;
-            transform: rotate(90deg); 
-            color: $textBlue; 
-            text-align: center;  
-        }
+    .active {
+      background-color: #f3fcf6;
+      color: #39cd62;
+      justify-content: center;
+      font-weight: 500;
     }
+
+    .table-body_action {
+      padding: 0px 20px;
+      flex-direction: column;
+      height: 36px;
+      font-size: 30px;
+      transform: rotate(90deg);
+      color: $textBlue;
+      text-align: center;
+    }
+  }
 }
