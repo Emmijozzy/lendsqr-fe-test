@@ -16,14 +16,14 @@ const TableBody  = (props: Props) => {
     const [clikedId, setClickedId] = useState(0)
     const {orgName, userName, createdAt, email, phoneNumber, lastActiveDate, id} = props
 
-    const handleClick = (id: any) => {
+    const handleClick = (clickedid: any) => {
         const userActionBoxs = Array.from(
             document.querySelectorAll('.user-action_box')
         );
         userActionBoxs.map((userActionBox) => {
             userActionBox.classList.remove('show-more-menu')
         })
-        setClickedId(id)
+        setClickedId((preClicked) => (clickedid == preClicked ? 0 : clickedid))
     }
 
   return (
