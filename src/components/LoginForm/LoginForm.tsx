@@ -25,7 +25,7 @@ const LoginForm = (props: Props) => {
 
 			setTimeout(() => {
 				reset();
-                navigate('/user');
+                navigate('/dashboard');
 				setLoading(false);
 			}, 2000);
 		}

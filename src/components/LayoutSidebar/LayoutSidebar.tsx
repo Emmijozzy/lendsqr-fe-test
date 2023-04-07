@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import LendLogo from '../logo/LendLogo';
 import NavItem from '../navItem/NavItem';
 import { AppContext } from '../../contexts/ContextProvider';
 import {customersNavDatas, businessNavDatas, settingsNavDatas} from '../../data/navItem';

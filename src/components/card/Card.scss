@@ -12,10 +12,10 @@
   flex-direction: column;
   justify-content: space-around;
   @include mobileMode {
-    width: 300px;
-    margin: 20px;
+    width: 100%;
+    margin: 15px 0;
   }
-
+  
   @include tabletMode {
     width: 280px;
     justify-content: space-around;

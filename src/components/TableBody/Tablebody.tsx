@@ -20,10 +20,10 @@ const TableBody  = (props: Props) => {
         const userActionBoxs = Array.from(
             document.querySelectorAll('.user-action_box')
         );
-        userActionBoxs.map((userActionBox) => {
+        userActionBoxs.forEach((userActionBox):void => {
             userActionBox.classList.remove('show-more-menu')
         })
-        setClickedId((preClicked) => (clickedid == preClicked ? 0 : clickedid))
+        setClickedId((preClicked) => (clickedid === preClicked ? 0 : clickedid))
     }
 
   return (

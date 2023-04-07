@@ -10,6 +10,7 @@
   margin-top: 100px;
   scrollbar-width: 3px;
   z-index: 2222;
+  height: calc(100vh - 100px);
 
   @include mobileMode {
     position: absolute;

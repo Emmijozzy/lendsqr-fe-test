@@ -8,9 +8,9 @@ const Filter = (props: Props) => {
 
     const {
 		register,
-		reset,
+		// reset,
 		handleSubmit,
-		formState: { errors },
+		// formState: { errors },
 	} = useForm({
 		mode: 'all',
 	});

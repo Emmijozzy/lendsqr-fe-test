@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ContextProvider from './contexts/ContextProvider';
 import Login from './pages/login/Login';
@@ -14,7 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/user/*" element={<Layout />}>
+          <Route path="/dashboard" element={<Layout />}>
+            <Route index element={<User />} />
           </Route>
           <Route path="*" element={<h1>PAGE NOT FOUND</h1>} />
         </Routes>

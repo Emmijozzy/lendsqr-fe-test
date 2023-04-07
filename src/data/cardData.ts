@@ -2,7 +2,6 @@ import user from '../assets/images/user.svg';
 import activeUser from '../assets/images/activeUser.svg'
 import loanUser from '../assets/images/loanUser.svg'
 import savingsUser from '../assets/images/savingsUser.svg'
-import { loadavg } from 'os';
 
 
 export const usersStats = [

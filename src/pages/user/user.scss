@@ -1,6 +1,21 @@
 @import "../../assets/styles/master.scss";
 
 .user {
+  margin-top: 100px;
+  padding: 60px 60px 0 60px;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+
+  @include mobileMode {
+    width: 100vw;
+    padding: 60px 20px 0px 20px;
+  }
+
+  @include tabletMode {
+    width: 100vw;
+    padding: 60px 60px 0px 60px;
+  }
+
   .user-header {
     .user-header_name {
       font-family: $workSans;
@@ -26,6 +41,7 @@
 
       @include mobileMode {
         justify-content: space-around;
+        flex-direction: column;
       }
     }
   }
