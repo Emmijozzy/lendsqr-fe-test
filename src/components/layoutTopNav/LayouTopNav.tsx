@@ -32,16 +32,16 @@ const LayoutTopNav = (props: Props) => {
                 <li className="notify-item"><NavLink to={'/doc'}>Doc</NavLink></li>
                 <li className="notify-item"><img src={notifyIcon} alt="Notification Icon" /></li>
                 <li className="notify-item avater"><img src={avater} alt="" /></li>
-                <li className="notify-item">
+                <li className="notify-item notify-item-username">
                     <div className="username_dropdown">
                         <p className="username">Adedeji</p>
                         <img src={dropdownIcon} alt="Dropdown Icon" />
                     </div>
                 </li>
+                <li className="mobile-nav" onClick={toggleNav}>
+                    <img src={nav ? closeNav : openNav} alt="" />
+                </li>
             </ul>
-            <span className="mobile-nav" onClick={toggleNav}>
-                <img src={nav ? closeNav : openNav} alt="" />
-            </span>
         </header>
     )
 }
